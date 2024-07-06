@@ -42,6 +42,69 @@ Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda p
 -   Exporte os resultados e analise as previsões geradas.
 -   Documente suas conclusões e qualquer insight obtido a partir das previsões.
 
-## 🤔 Dúvidas?
+Previsão de Estoque - Primeiro Projeto
+Neste repositório, compartilho meu primeiro projeto de previsão de estoque, feito durante uma aula prática.
 
-Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
+Passos Seguidos
+1. Importação do Dataset
+Dataset Utilizado: Importe o dataset 1000-com-preco-variavel-e-renovacao-estoque.csv.
+Configuração: Mantive a configuração recomendada no Full dataset com 1.0k rows.
+2. Preparação dos Dados
+Renomeei a Coluna: A coluna data_evento foi renomeada para dia.
+Configuração do Modelo: Configurei o tipo de modelo para dia.
+3. Seleção das Colunas
+Coluna de Previsão: Selecionei quantidade_estoque como a coluna alvo para o modelo prever.
+Sugestões de Melhoria: Substituí os valores das colunas recomendadas para melhorar a qualidade dos dados e a performance do modelo.
+4. Aplicação da Receita de Modelo
+Remoção de Duplicatas: Apliquei a receita de modelo "Drop duplicate all rows" para remover todas as linhas duplicadas.
+Analisar
+Examine as Métricas de Performance do Modelo
+Após o treinamento, examinei as seguintes métricas de performance para avaliar a precisão e eficiência do modelo:
+
+Avg. wQL (Weighted Quantile Loss): 0.288
+Explicação: Mede a precisão das previsões em diferentes pontos da distribuição dos dados. Quanto menor, melhor.
+MAPE (Mean Absolute Percentage Error): 1.037
+Explicação: Mede a precisão das previsões como uma porcentagem dos valores reais. Valores mais baixos indicam previsões mais precisas.
+WAPE (Weighted Absolute Percentage Error): 0.502
+Explicação: Similar ao MAPE, mas pondera os erros com base na magnitude dos valores reais. Valores menores indicam melhor desempenho.
+RMSE (Root Mean Square Error): 31.598
+Explicação: Mede a magnitude dos erros. Valores menores indicam erros menores e maior precisão do modelo.
+MASE (Mean Absolute Scaled Error): 0.000
+Explicação: Compara a performance do modelo com um modelo ingênuo de referência. Valores próximos de 0 indicam alta precisão.
+Verifique as Principais Características que Influenciam as Previsões
+Utilizei técnicas de interpretação de modelos, como SHAP (SHapley Additive exPlanations) e análise de importância de características, para identificar as variáveis mais influentes nas previsões.
+
+Faça Ajustes no Modelo
+Com base na análise das métricas e das características, fiz ajustes no modelo, incluindo:
+
+Ajuste de Hiperparâmetros
+Engenharia de Características
+Testes com Modelos Alternativos
+Re-treine até Obter um Desempenho Satisfatório
+Após realizar os ajustes necessários, re-treinei o modelo várias vezes até alcançar um desempenho satisfatório.
+
+Prever
+Use o Modelo Treinado para Fazer Previsões de Estoque
+Utilizei o modelo treinado para gerar previsões de estoque.
+
+Exporte os Resultados e Analise as Previsões Geradas
+Após gerar as previsões, exportei os resultados e realizei uma análise detalhada.
+
+Documente suas Conclusões e Qualquer Insight Obtido a Partir das Previsões
+Documentei todas as conclusões e insights obtidos a partir das previsões, incluindo a identificação de padrões, anomalias e sugestões para melhorias futuras.
+
+Resultados
+Com esses passos, consegui treinar um modelo básico de previsão de estoque. Foi uma ótima introdução prática ao uso de machine learning para resolver problemas reais.
+
+Análise de Previsões Individuais
+Com base nas informações obtidas, explorei a single prediction, selecionando itens específicos e analisando os gráficos com as informações de histórico de demanda e seus respectivos valores:
+
+p10 (Pessimista): Representa um cenário mais conservador.
+p50 (Normal): Representa a previsão central ou mediana.
+p90 (Otimista): Representa um cenário mais otimista.
+Essas análises ajudaram a entender melhor a variabilidade e a confiança das previsões feitas pelo modelo.
+Nota Final
+Este README foi editado utilizando inteligência artificial para melhor refletir minhas palavras e experiências. Se você tiver dúvidas ou quiser trocar conhecimentos, sinta-se à vontade para entrar em contato comigo!
+
+Sinta-se à vontade para explorar o repositório e ver os detalhes deste projeto inicial!
+
