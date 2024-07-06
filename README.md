@@ -47,7 +47,7 @@ Neste repositório, compartilho meu primeiro projeto de previsão de estoque, fe
 
 Passos Seguidos
 1. Importação do Dataset
-Dataset Utilizado: Importe o dataset 1000-com-preco-variavel-e-renovacao-estoque.csv.
+Dataset Utilizado: Importei o dataset 1000-com-preco-variavel-e-renovacao-estoque.csv.
 Configuração: Mantive a configuração recomendada no Full dataset com 1.0k rows.
 2. Preparação dos Dados
 Renomeei a Coluna: A coluna data_evento foi renomeada para dia.
